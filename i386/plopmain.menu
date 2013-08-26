@@ -1,0 +1,17 @@
+LABEL PLOP32
+MENU LABEL ^Plop Linux x86
+KERNEL er/plugins/plop/i386/bzimage
+INITRD er/plugins/plop/i386/initramfs.gz
+APPEND vga=1 nfsmount=10.0.0.1:/tftpboot/er/shares/plop/i386
+TEXT HELP
+                 Plop Linux x86.
+ENDTEXT
+
+LABEL PLOP32FB
+MENU LABEL ^Plop Linux x86 framebuffer mode
+KERNEL er/plugins/plop/i386/bzimage
+INITRD er/plugins/plop/i386/initramfs.gz
+APPEND vga=0x317 nfsmount=10.0.0.1:/tftpboot/er/shares/plop/i386
+TEXT HELP
+                 Plop Linux x86 framebuffer mode.
+ENDTEXT
